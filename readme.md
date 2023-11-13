@@ -2,12 +2,8 @@
 
 Projeto Front End
 
-## Alunos
+## Aluno
 
--Leonardo Kenji Akiyama
+-Leonardo Kenji Orikassa Akiyama
 
--Kaue Galon
 
--Pedro Henrique Cagol
-
--William Felipe Coscodai
