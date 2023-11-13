@@ -32,7 +32,7 @@
               placeholder="Confirmar senha"
               name="Csenha"
             />
-            <button class="button" type="submit">Cadastrar</button>
+            <button class="button" onclick="validarCadastro()">Cadastrar</button>
             <a id="voltar" href="../index.html">Voltar</a>
           </form>
           <p>
@@ -45,5 +45,37 @@
         <p>&copy; 2023 - Giga Chad HardWare - Todos os direitos reservados</p>
       </footer>
     </div>
+
+    <script>
+      function validarCadastro() 
+      {
+
+        var campos = ['nome', 'email', 'telefone', 'senha', 'Csenha'];
+        var todosPreenchidos = true;
+
+        for (var i = 0; i < campos.length; i++) {
+            var valorCampo = document.getElementsByName(campos[i])[0].value;
+            if (valorCampo === '') {
+                alert('Todos os campos são obrigatórios');
+                todosPreenchidos = false;
+                break;
+            }
+        }
+
+        if (todosPreenchidos) {
+            var senha = document.getElementsByName('senha')[0].value;
+            var confirmarSenha = document.getElementsByName('Csenha')[0].value;
+
+            if (senha === confirmarSenha) {
+                // Enviar dados para o servidor ou realizar outras ações necessárias
+                alert('Cadastro realizado com sucesso!');
+            } else {
+                alert('A senha e a confirmação de senha não coincidem.');
+            }
+        }
+
+      }
+
+    </script>
   </body>
 </html>
