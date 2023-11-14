@@ -8,6 +8,10 @@ form {
   width: 100%;
 }
 
+.campo-invalido {
+  border: 1px solid red;
+}
+
 main {
   display: flex;
   flex-direction: column;

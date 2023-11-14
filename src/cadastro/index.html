@@ -66,10 +66,16 @@
             var senha = document.getElementsByName('senha')[0].value;
             var confirmarSenha = document.getElementsByName('Csenha')[0].value;
 
+            var senhaElement = document.getElementsByName('senha')[0];
+            var confirmarSenhaElement = document.getElementsByName('Csenha')[0];
+
+
             if (senha === confirmarSenha) {
                 // Enviar dados para o servidor ou realizar outras ações necessárias
                 alert('Cadastro realizado com sucesso!');
             } else {
+                senhaElement.classList.add('campo-invalido');
+                confirmarSenhaElement.classList.add('campo-invalido');
                 alert('A senha e a confirmação de senha não coincidem.');
             }
         }
